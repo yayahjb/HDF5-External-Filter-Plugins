@@ -131,7 +131,7 @@ if(ENABLE_BITSHUFFLE_PLUGIN)
     add_subdirectory(bitshuffle)
 endif()
 
-
+if(ENABLE_MSI)
 #=============================================================================
 # setting up the MSI build for Windows
 #=============================================================================
@@ -152,4 +152,4 @@ if(CMAKE_SYSTEM_NAME MATCHES Windows)
     include(CPack)
     include(CPackWIX)
 endif()
-
+endif()
