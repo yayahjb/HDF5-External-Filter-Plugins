@@ -157,9 +157,10 @@ const H5Z_class2_t H5Z_BLOSC[1] = {{
     (H5Z_func_t)H5Z_filter_blosc,         /* The actual filter function */
 }};
 
+#ifndef CBF_FILTER_STATIC
 H5PL_type_t   H5PLget_plugin_type(void) {return H5PL_TYPE_FILTER;}
 const void *H5PLget_plugin_info(void) {return H5Z_BLOSC;}
-
+#endif
 
 
 /* The filter function */
